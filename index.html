@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PrimeVideoApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Prime Video</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body ng-controller="DropdownController as drop">
+    <header>
+        <div class="container">
+            <div class="img-container">
+                <a href="index.html"><img id="prime-video" src="img/navbar-logo.png" alt="Prime Video"></a>
+            </div>
+            <div class="dropdown" ng-click="drop.buttonIsPressed()">
+                <div class="dropdown-items"><img id="browser" src="img/browser-transperant.png" alt=""
+                        onclick="show_hide()"></div>
+                <div class="dropdown-items"><span class="dropdown-btn">EN</span></div>
+                <div class="dropdown-items" >
+                    <i id="icon" class="fa fa-sort-desc icon" aria-hidden="true" ng-if="!drop.showDropdown"></i>
+                    <i class="fa fa-sort-asc icon" aria-hidden="true" ng-if="drop.showDropdown"></i></div>
+            </div>
+            <div class="dropdown-items">Sign In</div>
+        </div>
+    </header>
+
+    <div id="dropdown-list" ng-if="drop.showDropdown" ng-blur="drop.hide()">
+        <i class="fa fa-times cross" aria-hidden="true" ng-click="drop.buttonIsPressed()"></i>
+        <div class="sublist">
+            <ul>
+                <li>Bahasa Indonesia</li>
+                <li>Dansk</li>
+                <li>Deutsch</li>
+                <li class="current">English<i class="fa fa-check current" aria-hidden="true"></i></li>
+                <li>Espanol</li>
+                <li>Francais</li>
+                <li>Italiano</li>
+                <li>Netherlands</li>
+            </ul>
+        </div>
+        <div class="sublist">
+            <ul>
+                <li>Norsk</li>
+                <li>Polski</li>
+                <li>Português(Brasil)</li>
+                <li>Suomi</li>
+                <li>Svenska</li>
+                <li>Turkse</li>
+                <li>Китайский</li>
+                <li>हिन्दी</li>
+            </ul>
+        </div>
+        <div class="sublist">
+            <ul>
+                <li>ନମସ୍କାର</li>
+                <li>வணக்கம்</li>
+                <li>ഹലോ</li>
+                <li>హలో</li>
+                <li>中文</li>
+                <li>중국말</li>
+            </ul>
+        </div>
+    </div>
+
+    <section  ng-click="drop.hide()">
+        <div class="container">
+            <div class="content">
+                <h1>Welcome to Prime Video</h1>
+                <h3>Join Prime to watch the latest movies, TV shows and award-winning Amazon Originals</h3>
+                <button class="btn">Start your 30-day free trial</button>
+            </div>
+        </div>
+    </section>
+
+    <section  ng-click="drop.hide()">
+        <div class="container right" id="second-section">
+            <div class="content">
+                <h1>Gulabo Sitabo</h1>
+                <h3>Welcome to the World of Gulabo Sitabo - a quirky slice of life movie, where Mirza (Amitabh
+                    Bachchan), a landlord of an old depleted mansion and Baankey (Ayushmann Khurrana), his tenant are
+                    like Tom and Jerry - unique and unmatched, friend and foe, naughty and smart, little and large!</h3>
+                <button class="btn">Click here to know more</button>
+            </div>
+        </div>
+    </section>
+
+    <section  ng-click="drop.hide()">
+        <div class="container left" id="third-section">
+            <div class="content">
+                <h1>Great Entertainment</h1>
+                <h3>With your Prime membership, you have access to exclusive Amazon Originals, blockbuster Bollywood
+                    movies, regional movies and more.</h3>
+                <button class="btn">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <section  ng-click="drop.hide()">
+        <div class="container right" id="fourth-section">
+            <div class="content">
+                <h1>One membership, many benefits</h1>
+                <h3>Your Prime membership now also includes ad-free music along with unlimited free, fast delivery on
+                    eligible items, exclusive access to deals & more.</h3>
+                <button class="btn">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <section  ng-click="drop.hide()">
+        <div class="container left" id="fifth-section">
+            <div class="content">
+                <h1>Even better with Fire TV Stick</h1>
+                <h3>The biggest movies and TV shows are always better on a big screen. Simply plug in your Amazon Fire
+                    TV Stick and stream on any HDTV. Press the voice button on the remote and say the name of the title
+                    you want to watch to find it in seconds.</h3>
+                <button class="btn">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="three-images">
+        <div class="container">
+            <div class="sub-images">
+                <img src="img/watch-anywhere.png" alt="">
+                <h1>Watch anywhere</h1>
+                <h3>Enjoy from the web or with the Prime Video app on your phone, tablet, or select Smart TVs — on upto
+                    3 devices at once.</h3>
+            </div>
+            <div class="sub-images">
+                <img src="img/download-and-go.jpg" alt="">
+                <h1>Download and go</h1>
+                <h3>Watch offline on the Prime Video app when you download titles to your iPhone, iPad, Tablet, or
+                    Android device.</h3>
+            </div>
+            <div class="sub-images">
+                <img src="img/data-saver.png" alt="">
+                <h1>Data Saver</h1>
+                <h3>Control data usage while downloading and watching videos on select phones or tablets.</h3>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="container left" id="family-section">
+            <div class="content">
+                <h1>Family Friendly</h1>
+                <h3>With easy to use Parental Controls and a dedicated kids page, enjoy secure, ad-free kids
+                    entertainment. Kids can enjoy popular TV shows like Peppa Pig, Powerpuff Girls, and Chhota Bheem.
+                </h3>
+                <button class="btn">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <img src="img/bottom-re.png" alt="">
+        <div class="footer-container">
+            <div>
+                <a href="#">Terms and Privacy Notice</a>
+                <a href="#">Send us feedback</a>
+                <a href="#">Help</a>
+            </div>
+            <div>
+                &copy; 1996-2020, Amazon.com, Inc. or its affiliates
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="js/script.js"></script> -->
+
+</body>
+
+</html>
